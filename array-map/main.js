@@ -11,11 +11,11 @@ const languages = [
 const doubled = numbers.map(num => num * 2);
 console.log('doubled:', doubled);
 
-const prices = numbers.map(num => `$${num.toString()}.00`);
+const prices = numbers.map(num => `$${num.toFixed(2)}`);
 console.log('prices:', prices);
 
 const upperCased = languages.map(lang => lang.toUpperCase());
 console.log('upperCased:', upperCased);
 
-const firstLetters = languages.map(lang => lang.charAt(0));
+const firstLetters = languages.map(lang => lang[0]);
 console.log('firstLetters:', firstLetters);
