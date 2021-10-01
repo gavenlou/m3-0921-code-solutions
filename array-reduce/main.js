@@ -31,5 +31,5 @@ console.log('balance:', balance);
 
 const composite = traits.reduce((pV, cV) => {
   return Object.assign(pV, cV);
-});
+}, {});
 console.log('composite:', composite);
