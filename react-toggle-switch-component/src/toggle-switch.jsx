@@ -16,16 +16,17 @@ export default class Toggle extends React.Component {
   }
 
   render() {
+    let switchClass = 'off';
+    let switchText = 'Off';
+
     if (this.state.on) {
-      return <div onClick={this.handleClick} className="on">
-        <button> </button>
-        <h1>On</h1>
-        </div>;
-    } else {
-      return <div onClick={this.handleClick} className="off">
-        <button> </button>
-        <h1>Off</h1>
-      </div>;
+      switchClass = 'on';
+      switchText = 'On';
     }
+
+    return <div onClick={this.handleClick} className={switchClass}>
+        <button> </button>
+        <h1>{switchText}</h1>
+      </div>;
   }
 }
