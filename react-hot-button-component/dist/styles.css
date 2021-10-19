@@ -1,0 +1,27 @@
+.cold {
+  background-color: aqua;
+}
+
+.chilly {
+  background-color: blue;
+}
+
+.lukewarm {
+  background-color: rgb(80, 80, 183);
+}
+
+.warm {
+  background-color: rgb(228, 85, 85);
+}
+
+.hot {
+  background-color: rgb(255, 123, 0);
+}
+
+.hotter {
+  background-color: yellow;
+}
+
+.hottest {
+  background-color: white;
+}
