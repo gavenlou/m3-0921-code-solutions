@@ -15,20 +15,23 @@ export default class HotButton extends React.Component {
   }
 
   render() {
+    let bttnClass = '';
+
     if (this.state.clicks < 3) {
-      return <button className="cold" onClick={this.handleClick}> Hot Button </button>;
+      bttnClass = 'cold';
     } else if (this.state.clicks < 6) {
-      return <button className="chilly" onClick={this.handleClick}> Hot Button </button>;
+      bttnClass = 'chilly';
     } else if (this.state.clicks < 9) {
-      return <button className="lukewarm" onClick={this.handleClick}> Hot Button </button>;
+      bttnClass = 'lukewarm';
     } else if (this.state.clicks < 12) {
-      return <button className="warm" onClick={this.handleClick}> Hot Button </button>;
+      bttnClass = 'warm';
     } else if (this.state.clicks < 15) {
-      return <button className="hot" onClick={this.handleClick}> Hot Button </button>;
+      bttnClass = 'hot';
     } else if (this.state.clicks < 18) {
-      return <button className="hotter" onClick={this.handleClick}> Hot Button </button>;
+      bttnClass = 'hotter';
     } else {
-      return <button className="hottest" onClick={this.handleClick}> Hot Button </button>;
+      bttnClass = 'hottest';
     }
+    return <button className={bttnClass} onClick={this.handleClick}> Hot Button </button>;
   }
 }
