@@ -1,0 +1,47 @@
+.on {
+  display: flex;
+  height: 30px;
+  width: 50px;
+  background-color: rgb(36, 235, 36);
+  transition: all 1s;
+}
+
+.on > button {
+  position: relative;
+  margin: auto;
+  height: 60%;
+  width: 40%;
+  left: 5px;
+  transition: all 1s;
+}
+
+.on > h1 {
+  position: relative;
+  margin-top: 5px;
+  top: -10px;
+  left: 40px;
+}
+
+.off {
+  display: flex;
+  height: 30px;
+  width: 50px;
+  background-color: rgb(78, 78, 78);
+  transition: all 1s;
+}
+
+.off > button {
+  position: relative;
+  margin: auto;
+  height: 60%;
+  width: 40%;
+  left: 30px;
+  transition: all 1s;
+}
+
+.off > h1 {
+  position: relative;
+  margin-top: 5px;
+  top: -10px;
+  left: 40px;
+}
