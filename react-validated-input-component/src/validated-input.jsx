@@ -35,7 +35,6 @@ export default class Validate extends React.Component {
     let error = '';
     if (this.state.valid) {
       passed = 'fas fa-check green';
-      error = '';
     } else {
       passed = 'fas fa-times red';
       error = this.state.error;
@@ -43,7 +42,7 @@ export default class Validate extends React.Component {
     return (
       <div className="container">
         <h3>Password</h3>
-        <input type="text" onChange={this.handleChange}></input> <span className={passed}></span>
+        <input type="password" onChange={this.handleChange}></input> <span className={passed}></span>
         <h5 className="red">{error}</h5>
       </div>
     );
