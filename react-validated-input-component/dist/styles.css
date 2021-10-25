@@ -1,0 +1,11 @@
+.container > * {
+  margin: auto;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: lightgreen;
+}
