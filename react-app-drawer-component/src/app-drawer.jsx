@@ -12,10 +12,8 @@ export default class Drawer extends React.Component {
   handleClick() {
     if (this.state.menu) {
       this.setState({ menu: false });
-      document.body.style.backgroundColor = 'rgba(255, 255, 255)';
     } else {
       this.setState({ menu: true });
-      document.body.style.backgroundColor = 'rgba(0,0,0, 0.4)';
     }
   }
 
