@@ -1,0 +1,19 @@
+.container {
+  width: 200px;
+  padding: 2px;
+}
+
+.topic {
+  font-size: 14pt;
+  border: 2px solid black;
+  background-color: lightgrey;
+}
+
+.desc {
+  border: 2px solid black;
+}
+
+.hidden {
+  display: none;
+  overflow-y: hidden;
+}
