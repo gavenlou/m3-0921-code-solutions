@@ -7,7 +7,8 @@ const images = [
   { Name: 'Burmy', URL: 'https://cdn2.bulbagarden.net/upload/thumb/c/c9/412Burmy-Plant.png/900px-412Burmy-Plant.png' },
   { Name: 'Luxray', URL: 'https://cdn2.bulbagarden.net/upload/a/a7/405Luxray.png' },
   { Name: 'Volcarona', URL: 'https://cdn2.bulbagarden.net/upload/6/6b/637Volcarona.png' },
-  { Name: 'Flygon', URL: 'https://cdn2.bulbagarden.net/upload/f/f1/330Flygon.png' }
+  { Name: 'Flygon', URL: 'https://cdn2.bulbagarden.net/upload/f/f1/330Flygon.png' },
+  { Name: 'Bulbasaur', URL: 'https://cdn2.bulbagarden.net/upload/2/21/001Bulbasaur.png' }
 ];
 
 ReactDOM.render(
