@@ -70,19 +70,26 @@ export default class App extends React.Component {
      * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
      * And specify the "Content-Type" header as "application/json"
      */
-    const current = this.state.todos[todoId - 1];
-    if (current.isCompleted) current.isCompleted = false;
-    else current.isCompleted = true;
-    fetch(`/api/todos/${current.todoId}`,
+    function checkID(id, index) {
+      if (id.todoId === todoId) return index;
+    }
+    let current = this.state.todos.findIndex(checkID);
+    if (current === -1) current = 0;
+    fetch(`/api/todos/${todoId}`,
       {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(current)
+        body: JSON.stringify(this.state.todos[current])
       })
       .then(res => res.json())
       .then(data => {
-        const all = this.state.todos;
-        all[todoId - 1] = data;
+        const all = this.state.todos.slice();
+        if (data.isCompleted) {
+          data.isCompleted = false;
+        } else {
+          data.isCompleted = true;
+        }
+        all[current] = data;
         this.setState({ todos: all });
       });
   }
