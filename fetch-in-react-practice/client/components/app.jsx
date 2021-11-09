@@ -75,20 +75,17 @@ export default class App extends React.Component {
     }
     let current = this.state.todos.findIndex(checkID);
     if (current === -1) current = 0;
+    const currentTodo = this.state.todos[current];
+    currentTodo.isCompleted = !currentTodo.isCompleted;
     fetch(`/api/todos/${todoId}`,
       {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(this.state.todos[current])
+        body: JSON.stringify(currentTodo)
       })
       .then(res => res.json())
       .then(data => {
         const all = this.state.todos.slice();
-        if (data.isCompleted) {
-          data.isCompleted = false;
-        } else {
-          data.isCompleted = true;
-        }
         all[current] = data;
         this.setState({ todos: all });
       });
